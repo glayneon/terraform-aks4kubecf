@@ -1,2 +1,2 @@
 # terraform-aks4kubecf
-Terraform code for AKS on Azure and KubeCF
+Terraform code for AKS on Azure and install KubeCF
