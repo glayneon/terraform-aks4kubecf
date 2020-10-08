@@ -30,6 +30,7 @@ resource "azurerm_kubernetes_cluster" "sasm-aks01" {
   location            = azurerm_resource_group.sasm-dev-aks.location
   resource_group_name = azurerm_resource_group.sasm-dev-aks.name
   dns_prefix          = var.dns_prefix
+  kubernetes_version = var.k8sver
 
   linux_profile {
     admin_username = "ubuntu"

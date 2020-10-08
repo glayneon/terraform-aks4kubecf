@@ -35,6 +35,9 @@ variable "dns_prefix" {
   default = "sasmaks"
 }
 
+variable "k8sver" {
+}
+
 variable location {
 }
 
