@@ -35,11 +35,11 @@ variable "dns_prefix" {
   default = "sasmaks"
 }
 
-variable "k8sver" {
-}
+variable "k8sver" {}
 
-variable location {
-}
+variable "private_subnet_mode" {}
+
+variable location {}
 
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 //variable log_analytics_workspace_location {
