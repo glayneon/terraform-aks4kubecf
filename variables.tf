@@ -41,6 +41,8 @@ variable "private_subnet_mode" {}
 
 variable location {}
 
+variable "network_policy" {}
+
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 //variable log_analytics_workspace_location {
 //  default = local.region
