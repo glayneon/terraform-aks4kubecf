@@ -32,7 +32,6 @@ resource "azurerm_kubernetes_cluster" "sasm-aks01" {
   dns_prefix          = var.dns_prefix
   kubernetes_version = var.k8sver
   private_cluster_enabled = var.private_subnet_mode
-  network_policy = var.network_policy
 
   linux_profile {
     admin_username = "ubuntu"
@@ -63,6 +62,7 @@ resource "azurerm_kubernetes_cluster" "sasm-aks01" {
   network_profile {
     load_balancer_sku = "Standard"
     network_plugin    = "kubenet"
+    // network_policy = var.network_policy
   }
 
   tags = {

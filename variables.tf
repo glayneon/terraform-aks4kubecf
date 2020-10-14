@@ -24,7 +24,7 @@ variable "client_id" {}
 variable "client_secret" {}
 
 variable "agent_count" {
-  default = 3
+  default = 10
 }
 
 variable "ssh_public_key" {
@@ -41,7 +41,7 @@ variable "private_subnet_mode" {}
 
 variable location {}
 
-variable "network_policy" {}
+// variable "network_policy" {}
 
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 //variable log_analytics_workspace_location {
