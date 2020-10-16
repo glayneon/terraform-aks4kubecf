@@ -1,0 +1,42 @@
+system_domain: devgrounds2.com
+ 
+settings:
+  router:
+    tls:
+      crt: |
+        -----BEGIN CERTIFICATE-----
+        kQHscmJPGIyDw0dD1PoIBhN/2nBfeRo48IiBGz/v5yZapSDY7emXBQ+IgUhbgtM3
+        hOzst/xFPg2XMWpxRA+hKjZvpMx7c4A=
+        -----END CERTIFICATE-----
+      key: |
+        -----BEGIN PRIVATE KEY-----
+       Nt6FE4zsyH2Z6Xp65nIzxL/5UfkfjLRSjreZnjdhNVEBeYOZFNks3Z+JM1MQOo14
+        hfJFlvApZS4yNzE9/3BcFw==
+        -----END PRIVATE KEY-----
+features:
+  eirini:
+    enabled: false
+  ingress:
+    enabled: true
+    tls:
+      crt: |
+        -----BEGIN CERTIFICATE-----
+       kQHscmJPGIyDw0dD1PoIBhN/2nBfeRo48IiBGz/v5yZapSDY7emXBQ+IgUhbgtM3
+        hOzst/xFPg2XMWpxRA+hKjZvpMx7c4A=
+        -----END CERTIFICATE-----
+      key: |
+        -----BEGIN PRIVATE KEY-----
+       Nt6FE4zsyH2Z6Xp65nIzxL/5UfkfjLRSjreZnjdhNVEBeYOZFNks3Z+JM1MQOo14
+        hfJFlvApZS4yNzE9/3BcFw==
+        -----END PRIVATE KEY-----
+ 
+high_availability: true
+ 
+operations:
+  inline:
+  - type: replace
+    path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/default_app_disk_in_mb?
+    value: 512
+  - type: replace
+    path: /instance_groups/name=api/jobs/name=cloud_controller_ng/properties/cc/default_app_memory?
+    value: 384
