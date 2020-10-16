@@ -12,7 +12,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "sasm-dev-aks" {
-  name = "${lower(var.project)}-${lower(var.env)}-aks"
+  name = "${lower(var.project)}-${lower(var.env)}-kubecf"
   // location = "${terraform.workspace == default ? koreacentral : japaneast}"
   location = var.region
 

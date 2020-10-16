@@ -39,9 +39,15 @@ variable "k8sver" {}
 
 variable "private_subnet_mode" {}
 
-variable location {}
+variable "location" {}
 
-// variable "network_policy" {}
+variable "network_policy" {}
+
+variable "mon_count" {}
+
+// variable "log_count" {}
+
+variable "cfnodes_count" {}
 
 # refer https://azure.microsoft.com/global-infrastructure/services/?products=monitor for log analytics available regions
 //variable log_analytics_workspace_location {
@@ -49,6 +55,3 @@ variable location {}
 //}
 
 # refer https://azure.microsoft.com/pricing/details/monitor/ for log analytics pricing 
-variable log_analytics_workspace_sku {
-  default = "PerGB2018"
-}
